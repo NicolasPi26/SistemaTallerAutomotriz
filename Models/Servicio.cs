@@ -1,0 +1,20 @@
+﻿namespace SistemaTallerAutomotriz.Models
+{
+    public class Servicio
+    {
+        public int IdServicio { get; set; }
+
+        public string Nombre { get; set; } = "";
+
+        public string? Descripcion { get; set; }
+
+        public decimal Precio { get; set; }
+
+        public int DuracionEstimada { get; set; }
+
+        public bool Estado { get; set; }
+
+        public virtual ICollection<DetalleFactura> DetalleFacturas { get; set; }
+            = new List<DetalleFactura>();
+    }
+}
